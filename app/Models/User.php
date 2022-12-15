@@ -14,4 +14,8 @@ class User extends Authenticatable
 
     protected $table = 'users';
     protected $guarded = [];
+    public function find_role()
+    {
+        return $this->hasOne('App\Models\Role', 'id', 'role_id')->select('name', 'description');
+    }
 }

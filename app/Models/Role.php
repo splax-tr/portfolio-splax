@@ -8,10 +8,10 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
 
-class Services extends Model
+class Role extends Model
 {
     use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
 
-    protected $table = 'services';
+    protected $table = 'role';
     protected $guarded = [];
 }

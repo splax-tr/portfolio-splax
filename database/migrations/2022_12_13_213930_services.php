@@ -17,10 +17,6 @@ return new class extends Migration {
             $table->string('name');
             $table->string('description');
             $table->string('image');
-            $table->string('status')->default('draft')->comment('draft, published, archived');
-            $table->timestamp('draft_at')->nullable();
-            $table->timestamp('published_at')->nullable();
-            $table->timestamp('archived_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

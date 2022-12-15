@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('password');
+            $table->foreignId('role_id')->constrained('role');
             $table->timestamps();
             $table->softDeletes();
         });
